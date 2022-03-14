@@ -1,0 +1,16 @@
+---
+- hosts: local #acg
+  tasks:
+  - name: change url
+    become: yes
+    lineinfile:
+      path: /etc/gitlab/gitlab.rb #/home/jason/Documents/GitHub/install-gitlab-on-server/ansible-files/test.txt 
+      regexp: 'external_url'
+      line: 'external_url <url>' #https://gitlab-prod.centralus.cloudapp.azure.com/admin'
+      state: present
+  - name: reconfigure gitlab ctl
+    shell: sudo gitlab-ctl reconfigure
+  - name: update gitlab
+    shell: | 
+      sudo apt udpate
+      sudo apt install gitlab-ee
