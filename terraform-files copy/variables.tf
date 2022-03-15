@@ -1,9 +1,9 @@
 variable "rg" {
-  default = "1-7f4ec64a-playground-sandbox"
+  default = "1-7bcd8d44-playground-sandbox"
 }
 
 variable "location" {
-  default = "Central US"
+  default = "South Central US"
 }
 
 # generate random string for domain_name_label under public ip
@@ -15,5 +15,5 @@ resource "random_string" "fqdn" {
 }
 
 variable "vmname" {
-    default="gitlab-vm"
+  default = "gitlab-vm"
 }

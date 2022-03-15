@@ -1,6 +1,7 @@
 #hosts-dev
 [acg]
-40.77.95.188
+20.225.156.44
 ansible_connection= ssh 
-ansible_user=gitlabadmin
-ansible_password=Qwerty123!
+ansible_user= testadmin
+ansible_password= Password1234!
+
