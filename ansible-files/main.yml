@@ -2,17 +2,17 @@
 - hosts: acg
   tasks:
   - name: change url
-    become: yes
     lineinfile:
       path: /etc/gitlab/gitlab.rb #/home/jason/Documents/GitHub/install-gitlab-on-server/ansible-files/test.txt 
-      regexp: 'external_url'
-      line: 'external_url kursgn.southcentralus.cloudapp.azure.com' #https://gitlab-prod.centralus.cloudapp.azure.com/admin'
+      regexp: "external_url 'https://168.61.3.232'"
+      line: 'external_url jdlrum.westus.cloudapp.azure.com' #https://gitlab-prod.centralus.cloudapp.azure.com/admin'
       state: present
   - name: reconfigure gitlab ctl
     become: yes
-    shell: gitlab-ctl reconfigure
+    shell: 
+      cmd: sudo gitlab-ctl reconfigure
   - name: update gitlab
     become: yes
     shell: | 
-      apt udpate
-      apt install gitlab-ee
+      sudo apt udpate -y
+      sudo apt install gitlab-ee -y

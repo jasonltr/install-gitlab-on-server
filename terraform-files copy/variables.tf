@@ -1,9 +1,9 @@
 variable "rg" {
-  default = "1-7bcd8d44-playground-sandbox"
+  default = "1-23281b5f-playground-sandbox"
 }
 
 variable "location" {
-  default = "South Central US"
+  default = "West US"
 }
 
 # generate random string for domain_name_label under public ip

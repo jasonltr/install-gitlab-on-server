@@ -1,7 +1,4 @@
 #hosts-dev
 [acg]
-20.225.156.44
-ansible_connection= ssh 
-ansible_user= testadmin
-ansible_password= Password1234!
+168.61.3.232 ansible_connection=ssh ansible_user=testadmin ansible_password=Password1234! ansible_become=yes
 
